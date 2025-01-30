@@ -1,0 +1,966 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4EB76E6E2D4C3A4000C57A92 /* RhythmGameTest Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4EB76E6D2D4C3A4000C57A92 /* RhythmGameTest Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4EB76E582D4C3A4000C57A92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4EB76E3F2D4C3A3F00C57A92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EB76E462D4C3A3F00C57A92;
+			remoteInfo = RhythmGameTest;
+		};
+		4EB76E622D4C3A4000C57A92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4EB76E3F2D4C3A3F00C57A92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EB76E462D4C3A3F00C57A92;
+			remoteInfo = RhythmGameTest;
+		};
+		4EB76E6F2D4C3A4000C57A92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4EB76E3F2D4C3A3F00C57A92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EB76E6C2D4C3A4000C57A92;
+			remoteInfo = "RhythmGameTest Watch App";
+		};
+		4EB76E802D4C3A4100C57A92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4EB76E3F2D4C3A3F00C57A92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EB76E6C2D4C3A4000C57A92;
+			remoteInfo = "RhythmGameTest Watch App";
+		};
+		4EB76E8A2D4C3A4100C57A92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4EB76E3F2D4C3A3F00C57A92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EB76E6C2D4C3A4000C57A92;
+			remoteInfo = "RhythmGameTest Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4EB76E962D4C3A4100C57A92 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				4EB76E6E2D4C3A4000C57A92 /* RhythmGameTest Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4EB76E472D4C3A3F00C57A92 /* RhythmGameTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RhythmGameTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EB76E572D4C3A4000C57A92 /* RhythmGameTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RhythmGameTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EB76E612D4C3A4000C57A92 /* RhythmGameTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RhythmGameTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EB76E6D2D4C3A4000C57A92 /* RhythmGameTest Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RhythmGameTest Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EB76E7F2D4C3A4100C57A92 /* RhythmGameTest Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RhythmGameTest Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EB76E892D4C3A4100C57A92 /* RhythmGameTest Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RhythmGameTest Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		4EB76E492D4C3A3F00C57A92 /* RhythmGameTest */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = RhythmGameTest;
+			sourceTree = "<group>";
+		};
+		4EB76E5A2D4C3A4000C57A92 /* RhythmGameTestTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = RhythmGameTestTests;
+			sourceTree = "<group>";
+		};
+		4EB76E642D4C3A4000C57A92 /* RhythmGameTestUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = RhythmGameTestUITests;
+			sourceTree = "<group>";
+		};
+		4EB76E712D4C3A4000C57A92 /* RhythmGameTest Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "RhythmGameTest Watch App";
+			sourceTree = "<group>";
+		};
+		4EB76E822D4C3A4100C57A92 /* RhythmGameTest Watch AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "RhythmGameTest Watch AppTests";
+			sourceTree = "<group>";
+		};
+		4EB76E8C2D4C3A4100C57A92 /* RhythmGameTest Watch AppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "RhythmGameTest Watch AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4EB76E442D4C3A3F00C57A92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EB76E542D4C3A4000C57A92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EB76E5E2D4C3A4000C57A92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EB76E6A2D4C3A4000C57A92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EB76E7C2D4C3A4100C57A92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EB76E862D4C3A4100C57A92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4EB76E3E2D4C3A3F00C57A92 = {
+			isa = PBXGroup;
+			children = (
+				4EB76E492D4C3A3F00C57A92 /* RhythmGameTest */,
+				4EB76E5A2D4C3A4000C57A92 /* RhythmGameTestTests */,
+				4EB76E642D4C3A4000C57A92 /* RhythmGameTestUITests */,
+				4EB76E712D4C3A4000C57A92 /* RhythmGameTest Watch App */,
+				4EB76E822D4C3A4100C57A92 /* RhythmGameTest Watch AppTests */,
+				4EB76E8C2D4C3A4100C57A92 /* RhythmGameTest Watch AppUITests */,
+				4EB76E482D4C3A3F00C57A92 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4EB76E482D4C3A3F00C57A92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4EB76E472D4C3A3F00C57A92 /* RhythmGameTest.app */,
+				4EB76E572D4C3A4000C57A92 /* RhythmGameTestTests.xctest */,
+				4EB76E612D4C3A4000C57A92 /* RhythmGameTestUITests.xctest */,
+				4EB76E6D2D4C3A4000C57A92 /* RhythmGameTest Watch App.app */,
+				4EB76E7F2D4C3A4100C57A92 /* RhythmGameTest Watch AppTests.xctest */,
+				4EB76E892D4C3A4100C57A92 /* RhythmGameTest Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4EB76E462D4C3A3F00C57A92 /* RhythmGameTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EB76E972D4C3A4100C57A92 /* Build configuration list for PBXNativeTarget "RhythmGameTest" */;
+			buildPhases = (
+				4EB76E432D4C3A3F00C57A92 /* Sources */,
+				4EB76E442D4C3A3F00C57A92 /* Frameworks */,
+				4EB76E452D4C3A3F00C57A92 /* Resources */,
+				4EB76E962D4C3A4100C57A92 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4EB76E702D4C3A4000C57A92 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				4EB76E492D4C3A3F00C57A92 /* RhythmGameTest */,
+			);
+			name = RhythmGameTest;
+			packageProductDependencies = (
+			);
+			productName = RhythmGameTest;
+			productReference = 4EB76E472D4C3A3F00C57A92 /* RhythmGameTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4EB76E562D4C3A4000C57A92 /* RhythmGameTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EB76E9A2D4C3A4100C57A92 /* Build configuration list for PBXNativeTarget "RhythmGameTestTests" */;
+			buildPhases = (
+				4EB76E532D4C3A4000C57A92 /* Sources */,
+				4EB76E542D4C3A4000C57A92 /* Frameworks */,
+				4EB76E552D4C3A4000C57A92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4EB76E592D4C3A4000C57A92 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				4EB76E5A2D4C3A4000C57A92 /* RhythmGameTestTests */,
+			);
+			name = RhythmGameTestTests;
+			packageProductDependencies = (
+			);
+			productName = RhythmGameTestTests;
+			productReference = 4EB76E572D4C3A4000C57A92 /* RhythmGameTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4EB76E602D4C3A4000C57A92 /* RhythmGameTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EB76E9D2D4C3A4100C57A92 /* Build configuration list for PBXNativeTarget "RhythmGameTestUITests" */;
+			buildPhases = (
+				4EB76E5D2D4C3A4000C57A92 /* Sources */,
+				4EB76E5E2D4C3A4000C57A92 /* Frameworks */,
+				4EB76E5F2D4C3A4000C57A92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4EB76E632D4C3A4000C57A92 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				4EB76E642D4C3A4000C57A92 /* RhythmGameTestUITests */,
+			);
+			name = RhythmGameTestUITests;
+			packageProductDependencies = (
+			);
+			productName = RhythmGameTestUITests;
+			productReference = 4EB76E612D4C3A4000C57A92 /* RhythmGameTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		4EB76E6C2D4C3A4000C57A92 /* RhythmGameTest Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EB76E932D4C3A4100C57A92 /* Build configuration list for PBXNativeTarget "RhythmGameTest Watch App" */;
+			buildPhases = (
+				4EB76E692D4C3A4000C57A92 /* Sources */,
+				4EB76E6A2D4C3A4000C57A92 /* Frameworks */,
+				4EB76E6B2D4C3A4000C57A92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				4EB76E712D4C3A4000C57A92 /* RhythmGameTest Watch App */,
+			);
+			name = "RhythmGameTest Watch App";
+			packageProductDependencies = (
+			);
+			productName = "RhythmGameTest Watch App";
+			productReference = 4EB76E6D2D4C3A4000C57A92 /* RhythmGameTest Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4EB76E7E2D4C3A4100C57A92 /* RhythmGameTest Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EB76EA02D4C3A4100C57A92 /* Build configuration list for PBXNativeTarget "RhythmGameTest Watch AppTests" */;
+			buildPhases = (
+				4EB76E7B2D4C3A4100C57A92 /* Sources */,
+				4EB76E7C2D4C3A4100C57A92 /* Frameworks */,
+				4EB76E7D2D4C3A4100C57A92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4EB76E812D4C3A4100C57A92 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				4EB76E822D4C3A4100C57A92 /* RhythmGameTest Watch AppTests */,
+			);
+			name = "RhythmGameTest Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "RhythmGameTest Watch AppTests";
+			productReference = 4EB76E7F2D4C3A4100C57A92 /* RhythmGameTest Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4EB76E882D4C3A4100C57A92 /* RhythmGameTest Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EB76EA32D4C3A4100C57A92 /* Build configuration list for PBXNativeTarget "RhythmGameTest Watch AppUITests" */;
+			buildPhases = (
+				4EB76E852D4C3A4100C57A92 /* Sources */,
+				4EB76E862D4C3A4100C57A92 /* Frameworks */,
+				4EB76E872D4C3A4100C57A92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4EB76E8B2D4C3A4100C57A92 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				4EB76E8C2D4C3A4100C57A92 /* RhythmGameTest Watch AppUITests */,
+			);
+			name = "RhythmGameTest Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "RhythmGameTest Watch AppUITests";
+			productReference = 4EB76E892D4C3A4100C57A92 /* RhythmGameTest Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4EB76E3F2D4C3A3F00C57A92 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					4EB76E462D4C3A3F00C57A92 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					4EB76E562D4C3A4000C57A92 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 4EB76E462D4C3A3F00C57A92;
+					};
+					4EB76E602D4C3A4000C57A92 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 4EB76E462D4C3A3F00C57A92;
+					};
+					4EB76E6C2D4C3A4000C57A92 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					4EB76E7E2D4C3A4100C57A92 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 4EB76E6C2D4C3A4000C57A92;
+					};
+					4EB76E882D4C3A4100C57A92 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 4EB76E6C2D4C3A4000C57A92;
+					};
+				};
+			};
+			buildConfigurationList = 4EB76E422D4C3A3F00C57A92 /* Build configuration list for PBXProject "RhythmGameTest" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4EB76E3E2D4C3A3F00C57A92;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 4EB76E482D4C3A3F00C57A92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4EB76E462D4C3A3F00C57A92 /* RhythmGameTest */,
+				4EB76E562D4C3A4000C57A92 /* RhythmGameTestTests */,
+				4EB76E602D4C3A4000C57A92 /* RhythmGameTestUITests */,
+				4EB76E6C2D4C3A4000C57A92 /* RhythmGameTest Watch App */,
+				4EB76E7E2D4C3A4100C57A92 /* RhythmGameTest Watch AppTests */,
+				4EB76E882D4C3A4100C57A92 /* RhythmGameTest Watch AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4EB76E452D4C3A3F00C57A92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EB76E552D4C3A4000C57A92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EB76E5F2D4C3A4000C57A92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EB76E6B2D4C3A4000C57A92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EB76E7D2D4C3A4100C57A92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EB76E872D4C3A4100C57A92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4EB76E432D4C3A3F00C57A92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EB76E532D4C3A4000C57A92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EB76E5D2D4C3A4000C57A92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EB76E692D4C3A4000C57A92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EB76E7B2D4C3A4100C57A92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EB76E852D4C3A4100C57A92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4EB76E592D4C3A4000C57A92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EB76E462D4C3A3F00C57A92 /* RhythmGameTest */;
+			targetProxy = 4EB76E582D4C3A4000C57A92 /* PBXContainerItemProxy */;
+		};
+		4EB76E632D4C3A4000C57A92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EB76E462D4C3A3F00C57A92 /* RhythmGameTest */;
+			targetProxy = 4EB76E622D4C3A4000C57A92 /* PBXContainerItemProxy */;
+		};
+		4EB76E702D4C3A4000C57A92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EB76E6C2D4C3A4000C57A92 /* RhythmGameTest Watch App */;
+			targetProxy = 4EB76E6F2D4C3A4000C57A92 /* PBXContainerItemProxy */;
+		};
+		4EB76E812D4C3A4100C57A92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EB76E6C2D4C3A4000C57A92 /* RhythmGameTest Watch App */;
+			targetProxy = 4EB76E802D4C3A4100C57A92 /* PBXContainerItemProxy */;
+		};
+		4EB76E8B2D4C3A4100C57A92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EB76E6C2D4C3A4000C57A92 /* RhythmGameTest Watch App */;
+			targetProxy = 4EB76E8A2D4C3A4100C57A92 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4EB76E912D4C3A4100C57A92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4EB76E922D4C3A4100C57A92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		4EB76E942D4C3A4100C57A92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RhythmGameTest Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 339H2WC2Z9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = RhythmGameTest;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = Oliemanq.RhythmGameTest;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Oliemanq.RhythmGameTest.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		4EB76E952D4C3A4100C57A92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RhythmGameTest Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 339H2WC2Z9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = RhythmGameTest;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = Oliemanq.RhythmGameTest;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Oliemanq.RhythmGameTest.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
+		4EB76E982D4C3A4100C57A92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RhythmGameTest/Preview Content\"";
+				DEVELOPMENT_TEAM = 339H2WC2Z9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = RhythmGameTest;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Oliemanq.RhythmGameTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4EB76E992D4C3A4100C57A92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RhythmGameTest/Preview Content\"";
+				DEVELOPMENT_TEAM = 339H2WC2Z9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = RhythmGameTest;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Oliemanq.RhythmGameTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4EB76E9B2D4C3A4100C57A92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 339H2WC2Z9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Oliemanq.RhythmGameTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RhythmGameTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RhythmGameTest";
+			};
+			name = Debug;
+		};
+		4EB76E9C2D4C3A4100C57A92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 339H2WC2Z9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Oliemanq.RhythmGameTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RhythmGameTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RhythmGameTest";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4EB76E9E2D4C3A4100C57A92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 339H2WC2Z9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Oliemanq.RhythmGameTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RhythmGameTest;
+			};
+			name = Debug;
+		};
+		4EB76E9F2D4C3A4100C57A92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 339H2WC2Z9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Oliemanq.RhythmGameTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RhythmGameTest;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4EB76EA12D4C3A4100C57A92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 339H2WC2Z9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Oliemanq.RhythmGameTest-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RhythmGameTest Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RhythmGameTest Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		4EB76EA22D4C3A4100C57A92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 339H2WC2Z9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Oliemanq.RhythmGameTest-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RhythmGameTest Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RhythmGameTest Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
+		4EB76EA42D4C3A4100C57A92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 339H2WC2Z9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Oliemanq.RhythmGameTest-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "RhythmGameTest Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		4EB76EA52D4C3A4100C57A92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 339H2WC2Z9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Oliemanq.RhythmGameTest-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "RhythmGameTest Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4EB76E422D4C3A3F00C57A92 /* Build configuration list for PBXProject "RhythmGameTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EB76E912D4C3A4100C57A92 /* Debug */,
+				4EB76E922D4C3A4100C57A92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EB76E932D4C3A4100C57A92 /* Build configuration list for PBXNativeTarget "RhythmGameTest Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EB76E942D4C3A4100C57A92 /* Debug */,
+				4EB76E952D4C3A4100C57A92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EB76E972D4C3A4100C57A92 /* Build configuration list for PBXNativeTarget "RhythmGameTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EB76E982D4C3A4100C57A92 /* Debug */,
+				4EB76E992D4C3A4100C57A92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EB76E9A2D4C3A4100C57A92 /* Build configuration list for PBXNativeTarget "RhythmGameTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EB76E9B2D4C3A4100C57A92 /* Debug */,
+				4EB76E9C2D4C3A4100C57A92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EB76E9D2D4C3A4100C57A92 /* Build configuration list for PBXNativeTarget "RhythmGameTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EB76E9E2D4C3A4100C57A92 /* Debug */,
+				4EB76E9F2D4C3A4100C57A92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EB76EA02D4C3A4100C57A92 /* Build configuration list for PBXNativeTarget "RhythmGameTest Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EB76EA12D4C3A4100C57A92 /* Debug */,
+				4EB76EA22D4C3A4100C57A92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EB76EA32D4C3A4100C57A92 /* Build configuration list for PBXNativeTarget "RhythmGameTest Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EB76EA42D4C3A4100C57A92 /* Debug */,
+				4EB76EA52D4C3A4100C57A92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4EB76E3F2D4C3A3F00C57A92 /* Project object */;
+}
