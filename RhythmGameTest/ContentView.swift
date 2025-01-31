@@ -24,18 +24,16 @@ struct ContentView: View {
         
         VStack {
             Text(songTitle)
-                .frame(width: UIScreen.main.bounds.width/1.6, height:UIScreen.main.bounds.size.height/20)
-                .font(.system(size: fontSize))
-                .foregroundColor(.secondary)
-                .background(Color.clear)
-                .clipShape(Capsule())
-                .overlay(Capsule().stroke(.gray, lineWidth: 2))
-                .shadow(color:.gray,radius: 3)
-                .offset(y: UIScreen.main.bounds.size.height/5.1)
-                .opacity(musicPerms ? 1 : 0)
-                .onChange(of: songTitle, {
-                    
-                })
+            .frame(width: UIScreen.main.bounds.width/1.6, height:UIScreen.main.bounds.size.height/20)
+            .font(.system(size: fontSize))
+            .foregroundColor(.secondary)
+            .background(Color.clear)
+            .clipShape(Capsule())
+            .overlay(Capsule().stroke(.gray, lineWidth: 2))
+            .shadow(color:.gray,radius: 3)
+            .offset(y: UIScreen.main.bounds.size.height/5.1)
+            .opacity(musicPerms ? 1 : 0)
+            
             
             //BUTTON 1________________________________________________
             Button("Display song title"){
