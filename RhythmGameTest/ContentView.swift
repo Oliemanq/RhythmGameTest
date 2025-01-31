@@ -11,8 +11,6 @@ import MediaPlayer
 import Darwin
 var text = "Hello World ";
 
-
-
 struct ContentView: View {
     @State private var showAlert1 = false
     @State private var showAlert2 = false
@@ -26,22 +24,30 @@ struct ContentView: View {
         
         VStack {
             Text(songTitle)
-            .frame(width: UIScreen.main.bounds.width/1.6, height:UIScreen.main.bounds.size.height/20)
-            .font(.system(size: fontSize))
-            .foregroundColor(.secondary)
-            .background(Color.clear)
-            .clipShape(Capsule())
-            .overlay(Capsule().stroke(.gray, lineWidth: 2))
-            .shadow(color:.gray,radius: 3)
-            .offset(y: UIScreen.main.bounds.size.height/5.1)
-            .opacity(musicPerms ? 1 : 0)
-
+                .frame(width: UIScreen.main.bounds.width/1.6, height:UIScreen.main.bounds.size.height/20)
+                .font(.system(size: fontSize))
+                .foregroundColor(.secondary)
+                .background(Color.clear)
+                .clipShape(Capsule())
+                .overlay(Capsule().stroke(.gray, lineWidth: 2))
+                .shadow(color:.gray,radius: 3)
+                .offset(y: UIScreen.main.bounds.size.height/5.1)
+                .opacity(musicPerms ? 1 : 0)
+                .onChange(of: songTitle, {
+                    
+                })
+            
             //BUTTON 1________________________________________________
             Button("Display song title"){
-                fetchNowPlaying()
+                requestMusicPermission()
                 fetchNowPlaying()
                 showAlert1=true
-            }.alert(songTitle, isPresented: $showAlert1){}
+            }.alert(songTitle, isPresented: $showAlert1) {
+                Button("Reset") {
+                    songTitle = "No song playing"
+                }
+                Button("Ok", role:.cancel) { }
+            }
             .frame(width: UIScreen.main.bounds.width/1.6, height:UIScreen.main.bounds.size.height/20)
             .font(.system(size: fontSize))
             .foregroundColor(.secondary)
@@ -86,6 +92,7 @@ struct ContentView: View {
             }
         }
     }
+    
     func fetchNowPlaying() {
         let musicPlayer = MPMusicPlayerController.systemMusicPlayer
         print("ran "+songTitle)
@@ -97,8 +104,6 @@ struct ContentView: View {
             }
         }
     }
-    
-
 }
 
 

@@ -72,7 +72,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		778BAA0E2D4D326A007570BC /* Exceptions for "RhythmGameTest" folder in "RhythmGameTest" target */ = {
+		4EDFDC292D4D68A500834D91 /* Exceptions for "RhythmGameTest" folder in "RhythmGameTest" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -85,7 +85,7 @@
 		4EB76E492D4C3A3F00C57A92 /* RhythmGameTest */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				778BAA0E2D4D326A007570BC /* Exceptions for "RhythmGameTest" folder in "RhythmGameTest" target */,
+				4EDFDC292D4D68A500834D91 /* Exceptions for "RhythmGameTest" folder in "RhythmGameTest" target */,
 			);
 			path = RhythmGameTest;
 			sourceTree = "<group>";
@@ -697,6 +697,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RhythmGameTest/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = RhythmGameTest;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Needed to access currently playing media";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -732,6 +733,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RhythmGameTest/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = RhythmGameTest;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Needed to access currently playing media";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
