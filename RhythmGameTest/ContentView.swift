@@ -23,11 +23,23 @@ struct ContentView: View {
     
     
     var body: some View {
+        
         VStack {
+            Text(songTitle)
+            .frame(width: UIScreen.main.bounds.width/1.6, height:UIScreen.main.bounds.size.height/20)
+            .font(.system(size: fontSize))
+            .foregroundColor(.secondary)
+            .background(Color.clear)
+            .clipShape(Capsule())
+            .overlay(Capsule().stroke(.gray, lineWidth: 2))
+            .shadow(color:.gray,radius: 3)
+            .offset(y: UIScreen.main.bounds.size.height/5.1)
+            .opacity(musicPerms ? 1 : 0)
+
             //BUTTON 1________________________________________________
             Button("Display song title"){
                 fetchNowPlaying()
-                sleep(2)
+                fetchNowPlaying()
                 showAlert1=true
             }.alert(songTitle, isPresented: $showAlert1){}
             .frame(width: UIScreen.main.bounds.width/1.6, height:UIScreen.main.bounds.size.height/20)
@@ -53,7 +65,7 @@ struct ContentView: View {
             .overlay(Capsule().stroke(.gray, lineWidth: 2))
             .shadow(color:.gray,radius: 3)
             .offset(y: UIScreen.main.bounds.size.height/5)
-        }
+        }.onAppear(perform: fetchNowPlaying)
     }
     func requestMusicPermission() {
         if MPMediaLibrary.authorizationStatus() == .denied {
@@ -76,7 +88,7 @@ struct ContentView: View {
     }
     func fetchNowPlaying() {
         let musicPlayer = MPMusicPlayerController.systemMusicPlayer
-        
+        print("ran "+songTitle)
         DispatchQueue.main.async {
             if let nowPlayingItem = musicPlayer.nowPlayingItem {
                 songTitle = nowPlayingItem.title ?? "Unknown Title"
@@ -86,7 +98,10 @@ struct ContentView: View {
         }
     }
     
+
 }
+
+
 
 #Preview {
     ContentView()
