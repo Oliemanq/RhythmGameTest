@@ -8,6 +8,7 @@
 import SwiftUI
 import WatchConnectivity
 import MediaPlayer
+import Darwin
 var text = "Hello World ";
 
 
@@ -25,8 +26,10 @@ struct ContentView: View {
         VStack {
             //BUTTON 1________________________________________________
             Button("Display song title"){
-                ()
-            }
+                fetchNowPlaying()
+                sleep(2)
+                showAlert1=true
+            }.alert(songTitle, isPresented: $showAlert1){}
             .frame(width: UIScreen.main.bounds.width/1.6, height:UIScreen.main.bounds.size.height/20)
             .font(.system(size: fontSize))
             .foregroundColor(.secondary)

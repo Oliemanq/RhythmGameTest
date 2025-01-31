@@ -72,7 +72,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		4EDFDC062D4C937000834D91 /* Exceptions for "RhythmGameTest" folder in "RhythmGameTest" target */ = {
+		778BAA0E2D4D326A007570BC /* Exceptions for "RhythmGameTest" folder in "RhythmGameTest" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -85,7 +85,7 @@
 		4EB76E492D4C3A3F00C57A92 /* RhythmGameTest */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				4EDFDC062D4C937000834D91 /* Exceptions for "RhythmGameTest" folder in "RhythmGameTest" target */,
+				778BAA0E2D4D326A007570BC /* Exceptions for "RhythmGameTest" folder in "RhythmGameTest" target */,
 			);
 			path = RhythmGameTest;
 			sourceTree = "<group>";
