@@ -9,14 +9,18 @@ import SwiftUI
 import WatchConnectivity
 import MediaPlayer
 import Darwin
+
 var text = "Hello World ";
+let musicPlayer = MPMusicPlayerController.systemMusicPlayer
+
 
 struct ContentView: View {
     @State private var showAlert1 = false
     @State private var showAlert2 = false
     @State private var musicPerms = false
     @State private var fontSize = UIScreen.main.bounds.size.height/30
-    @State private var songTitle: String = "No song playing"
+    @State private var songTitle = musicPlayer.nowPlayingItem?.title ?? "No song playing"
+
     
     
     
@@ -24,8 +28,8 @@ struct ContentView: View {
         
         VStack {
             Text(songTitle)
-            .frame(width: UIScreen.main.bounds.width/1.6, height:UIScreen.main.bounds.size.height/20)
             .font(.system(size: fontSize))
+            .frame(width: CGFloat(songTitle.count)*fontSize/2, height:UIScreen.main.bounds.size.height/20)
             .foregroundColor(.secondary)
             .background(Color.clear)
             .clipShape(Capsule())
@@ -92,8 +96,7 @@ struct ContentView: View {
     }
     
     func fetchNowPlaying() {
-        let musicPlayer = MPMusicPlayerController.systemMusicPlayer
-        print("ran "+songTitle)
+        print("ran " + songTitle)
         DispatchQueue.main.async {
             if let nowPlayingItem = musicPlayer.nowPlayingItem {
                 songTitle = nowPlayingItem.title ?? "Unknown Title"
