@@ -7,15 +7,34 @@
 
 import SwiftUI
 import WatchConnectivity
+var text = "Hello, World!";
+
+
 
 struct ContentView: View {
+    @State private var showAlert = false
+    @State private var fontSize = 28.0
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button(text){
+                showAlert=true
+                fontSize += 5
+            }
+            .alert("Hello World!", isPresented: $showAlert){
+                Button("trigger", role: .cancel){
+                    fontSize -= 5
+                }
+            }
+            .frame(width: 250, height: 60)
+            .font(.system(size: fontSize))
+            .foregroundColor(.secondary)
+            .background(Color.clear)
+            .clipShape(Capsule())
+            .overlay(Capsule().stroke(.gray, lineWidth: 2))
+            .shadow(color:.gray,radius: 3)
         }
+        .offset(y: 100)
         .padding()
     }
 }
@@ -24,13 +43,6 @@ struct ContentView: View {
     ContentView()
 }
 
-/*
- func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any]){
- if WCSession.isSupported() {
- let session = WCSession.default
- session.delegate =
- session.activate()
- }
- }
- */
-
+func printTest(){
+    print("Action called");
+}
