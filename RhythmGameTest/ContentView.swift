@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WatchConnectivity
 
 struct ContentView: View {
     var body: some View {
@@ -22,3 +23,14 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
+/*
+ func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any]){
+ if WCSession.isSupported() {
+ let session = WCSession.default
+ session.delegate =
+ session.activate()
+ }
+ }
+ */
+
