@@ -11,35 +11,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4EB76E582D4C3A4000C57A92 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4EB76E3F2D4C3A3F00C57A92 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4EB76E462D4C3A3F00C57A92;
-			remoteInfo = RhythmGameTest;
-		};
-		4EB76E622D4C3A4000C57A92 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4EB76E3F2D4C3A3F00C57A92 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4EB76E462D4C3A3F00C57A92;
-			remoteInfo = RhythmGameTest;
-		};
 		4EB76E6F2D4C3A4000C57A92 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4EB76E3F2D4C3A3F00C57A92 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4EB76E6C2D4C3A4000C57A92;
-			remoteInfo = "RhythmGameTest Watch App";
-		};
-		4EB76E802D4C3A4100C57A92 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4EB76E3F2D4C3A3F00C57A92 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4EB76E6C2D4C3A4000C57A92;
-			remoteInfo = "RhythmGameTest Watch App";
-		};
-		4EB76E8A2D4C3A4100C57A92 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4EB76E3F2D4C3A3F00C57A92 /* Project object */;
 			proxyType = 1;
@@ -64,11 +36,7 @@
 
 /* Begin PBXFileReference section */
 		4EB76E472D4C3A3F00C57A92 /* RhythmGameTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RhythmGameTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4EB76E572D4C3A4000C57A92 /* RhythmGameTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RhythmGameTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4EB76E612D4C3A4000C57A92 /* RhythmGameTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RhythmGameTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB76E6D2D4C3A4000C57A92 /* RhythmGameTest Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RhythmGameTest Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4EB76E7F2D4C3A4100C57A92 /* RhythmGameTest Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RhythmGameTest Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4EB76E892D4C3A4100C57A92 /* RhythmGameTest Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RhythmGameTest Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -90,49 +58,15 @@
 			path = RhythmGameTest;
 			sourceTree = "<group>";
 		};
-		4EB76E5A2D4C3A4000C57A92 /* RhythmGameTestTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = RhythmGameTestTests;
-			sourceTree = "<group>";
-		};
-		4EB76E642D4C3A4000C57A92 /* RhythmGameTestUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = RhythmGameTestUITests;
-			sourceTree = "<group>";
-		};
 		4EB76E712D4C3A4000C57A92 /* RhythmGameTest Watch App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "RhythmGameTest Watch App";
-			sourceTree = "<group>";
-		};
-		4EB76E822D4C3A4100C57A92 /* RhythmGameTest Watch AppTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "RhythmGameTest Watch AppTests";
-			sourceTree = "<group>";
-		};
-		4EB76E8C2D4C3A4100C57A92 /* RhythmGameTest Watch AppUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "RhythmGameTest Watch AppUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4EB76E442D4C3A3F00C57A92 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4EB76E542D4C3A4000C57A92 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4EB76E5E2D4C3A4000C57A92 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -146,20 +80,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4EB76E7C2D4C3A4100C57A92 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4EB76E862D4C3A4100C57A92 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -167,11 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				4EB76E492D4C3A3F00C57A92 /* RhythmGameTest */,
-				4EB76E5A2D4C3A4000C57A92 /* RhythmGameTestTests */,
-				4EB76E642D4C3A4000C57A92 /* RhythmGameTestUITests */,
 				4EB76E712D4C3A4000C57A92 /* RhythmGameTest Watch App */,
-				4EB76E822D4C3A4100C57A92 /* RhythmGameTest Watch AppTests */,
-				4EB76E8C2D4C3A4100C57A92 /* RhythmGameTest Watch AppUITests */,
 				4EB76E482D4C3A3F00C57A92 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -180,11 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				4EB76E472D4C3A3F00C57A92 /* RhythmGameTest.app */,
-				4EB76E572D4C3A4000C57A92 /* RhythmGameTestTests.xctest */,
-				4EB76E612D4C3A4000C57A92 /* RhythmGameTestUITests.xctest */,
 				4EB76E6D2D4C3A4000C57A92 /* RhythmGameTest Watch App.app */,
-				4EB76E7F2D4C3A4100C57A92 /* RhythmGameTest Watch AppTests.xctest */,
-				4EB76E892D4C3A4100C57A92 /* RhythmGameTest Watch AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -216,52 +128,6 @@
 			productReference = 4EB76E472D4C3A3F00C57A92 /* RhythmGameTest.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4EB76E562D4C3A4000C57A92 /* RhythmGameTestTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4EB76E9A2D4C3A4100C57A92 /* Build configuration list for PBXNativeTarget "RhythmGameTestTests" */;
-			buildPhases = (
-				4EB76E532D4C3A4000C57A92 /* Sources */,
-				4EB76E542D4C3A4000C57A92 /* Frameworks */,
-				4EB76E552D4C3A4000C57A92 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4EB76E592D4C3A4000C57A92 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				4EB76E5A2D4C3A4000C57A92 /* RhythmGameTestTests */,
-			);
-			name = RhythmGameTestTests;
-			packageProductDependencies = (
-			);
-			productName = RhythmGameTestTests;
-			productReference = 4EB76E572D4C3A4000C57A92 /* RhythmGameTestTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		4EB76E602D4C3A4000C57A92 /* RhythmGameTestUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4EB76E9D2D4C3A4100C57A92 /* Build configuration list for PBXNativeTarget "RhythmGameTestUITests" */;
-			buildPhases = (
-				4EB76E5D2D4C3A4000C57A92 /* Sources */,
-				4EB76E5E2D4C3A4000C57A92 /* Frameworks */,
-				4EB76E5F2D4C3A4000C57A92 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4EB76E632D4C3A4000C57A92 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				4EB76E642D4C3A4000C57A92 /* RhythmGameTestUITests */,
-			);
-			name = RhythmGameTestUITests;
-			packageProductDependencies = (
-			);
-			productName = RhythmGameTestUITests;
-			productReference = 4EB76E612D4C3A4000C57A92 /* RhythmGameTestUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		4EB76E6C2D4C3A4000C57A92 /* RhythmGameTest Watch App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EB76E932D4C3A4100C57A92 /* Build configuration list for PBXNativeTarget "RhythmGameTest Watch App" */;
@@ -284,52 +150,6 @@
 			productReference = 4EB76E6D2D4C3A4000C57A92 /* RhythmGameTest Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4EB76E7E2D4C3A4100C57A92 /* RhythmGameTest Watch AppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4EB76EA02D4C3A4100C57A92 /* Build configuration list for PBXNativeTarget "RhythmGameTest Watch AppTests" */;
-			buildPhases = (
-				4EB76E7B2D4C3A4100C57A92 /* Sources */,
-				4EB76E7C2D4C3A4100C57A92 /* Frameworks */,
-				4EB76E7D2D4C3A4100C57A92 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4EB76E812D4C3A4100C57A92 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				4EB76E822D4C3A4100C57A92 /* RhythmGameTest Watch AppTests */,
-			);
-			name = "RhythmGameTest Watch AppTests";
-			packageProductDependencies = (
-			);
-			productName = "RhythmGameTest Watch AppTests";
-			productReference = 4EB76E7F2D4C3A4100C57A92 /* RhythmGameTest Watch AppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		4EB76E882D4C3A4100C57A92 /* RhythmGameTest Watch AppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4EB76EA32D4C3A4100C57A92 /* Build configuration list for PBXNativeTarget "RhythmGameTest Watch AppUITests" */;
-			buildPhases = (
-				4EB76E852D4C3A4100C57A92 /* Sources */,
-				4EB76E862D4C3A4100C57A92 /* Frameworks */,
-				4EB76E872D4C3A4100C57A92 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4EB76E8B2D4C3A4100C57A92 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				4EB76E8C2D4C3A4100C57A92 /* RhythmGameTest Watch AppUITests */,
-			);
-			name = "RhythmGameTest Watch AppUITests";
-			packageProductDependencies = (
-			);
-			productName = "RhythmGameTest Watch AppUITests";
-			productReference = 4EB76E892D4C3A4100C57A92 /* RhythmGameTest Watch AppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -343,24 +163,8 @@
 					4EB76E462D4C3A3F00C57A92 = {
 						CreatedOnToolsVersion = 16.2;
 					};
-					4EB76E562D4C3A4000C57A92 = {
-						CreatedOnToolsVersion = 16.2;
-						TestTargetID = 4EB76E462D4C3A3F00C57A92;
-					};
-					4EB76E602D4C3A4000C57A92 = {
-						CreatedOnToolsVersion = 16.2;
-						TestTargetID = 4EB76E462D4C3A3F00C57A92;
-					};
 					4EB76E6C2D4C3A4000C57A92 = {
 						CreatedOnToolsVersion = 16.2;
-					};
-					4EB76E7E2D4C3A4100C57A92 = {
-						CreatedOnToolsVersion = 16.2;
-						TestTargetID = 4EB76E6C2D4C3A4000C57A92;
-					};
-					4EB76E882D4C3A4100C57A92 = {
-						CreatedOnToolsVersion = 16.2;
-						TestTargetID = 4EB76E6C2D4C3A4000C57A92;
 					};
 				};
 			};
@@ -379,11 +183,7 @@
 			projectRoot = "";
 			targets = (
 				4EB76E462D4C3A3F00C57A92 /* RhythmGameTest */,
-				4EB76E562D4C3A4000C57A92 /* RhythmGameTestTests */,
-				4EB76E602D4C3A4000C57A92 /* RhythmGameTestUITests */,
 				4EB76E6C2D4C3A4000C57A92 /* RhythmGameTest Watch App */,
-				4EB76E7E2D4C3A4100C57A92 /* RhythmGameTest Watch AppTests */,
-				4EB76E882D4C3A4100C57A92 /* RhythmGameTest Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -396,35 +196,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4EB76E552D4C3A4000C57A92 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4EB76E5F2D4C3A4000C57A92 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4EB76E6B2D4C3A4000C57A92 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4EB76E7D2D4C3A4100C57A92 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4EB76E872D4C3A4100C57A92 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -441,35 +213,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4EB76E532D4C3A4000C57A92 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4EB76E5D2D4C3A4000C57A92 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4EB76E692D4C3A4000C57A92 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4EB76E7B2D4C3A4100C57A92 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4EB76E852D4C3A4100C57A92 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -479,30 +223,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4EB76E592D4C3A4000C57A92 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4EB76E462D4C3A3F00C57A92 /* RhythmGameTest */;
-			targetProxy = 4EB76E582D4C3A4000C57A92 /* PBXContainerItemProxy */;
-		};
-		4EB76E632D4C3A4000C57A92 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4EB76E462D4C3A3F00C57A92 /* RhythmGameTest */;
-			targetProxy = 4EB76E622D4C3A4000C57A92 /* PBXContainerItemProxy */;
-		};
 		4EB76E702D4C3A4000C57A92 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4EB76E6C2D4C3A4000C57A92 /* RhythmGameTest Watch App */;
 			targetProxy = 4EB76E6F2D4C3A4000C57A92 /* PBXContainerItemProxy */;
-		};
-		4EB76E812D4C3A4100C57A92 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4EB76E6C2D4C3A4000C57A92 /* RhythmGameTest Watch App */;
-			targetProxy = 4EB76E802D4C3A4100C57A92 /* PBXContainerItemProxy */;
-		};
-		4EB76E8B2D4C3A4100C57A92 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4EB76E6C2D4C3A4000C57A92 /* RhythmGameTest Watch App */;
-			targetProxy = 4EB76E8A2D4C3A4100C57A92 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -755,166 +479,6 @@
 			};
 			name = Release;
 		};
-		4EB76E9B2D4C3A4100C57A92 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 339H2WC2Z9;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Oliemanq.RhythmGameTestTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RhythmGameTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RhythmGameTest";
-			};
-			name = Debug;
-		};
-		4EB76E9C2D4C3A4100C57A92 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 339H2WC2Z9;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Oliemanq.RhythmGameTestTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RhythmGameTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RhythmGameTest";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		4EB76E9E2D4C3A4100C57A92 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 339H2WC2Z9;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Oliemanq.RhythmGameTestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RhythmGameTest;
-			};
-			name = Debug;
-		};
-		4EB76E9F2D4C3A4100C57A92 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 339H2WC2Z9;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Oliemanq.RhythmGameTestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RhythmGameTest;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		4EB76EA12D4C3A4100C57A92 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 339H2WC2Z9;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Oliemanq.RhythmGameTest-Watch-AppTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RhythmGameTest Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RhythmGameTest Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 11.2;
-			};
-			name = Debug;
-		};
-		4EB76EA22D4C3A4100C57A92 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 339H2WC2Z9;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Oliemanq.RhythmGameTest-Watch-AppTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RhythmGameTest Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RhythmGameTest Watch App";
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 11.2;
-			};
-			name = Release;
-		};
-		4EB76EA42D4C3A4100C57A92 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 339H2WC2Z9;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Oliemanq.RhythmGameTest-Watch-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "RhythmGameTest Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 11.2;
-			};
-			name = Debug;
-		};
-		4EB76EA52D4C3A4100C57A92 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 339H2WC2Z9;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Oliemanq.RhythmGameTest-Watch-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "RhythmGameTest Watch App";
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 11.2;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -941,42 +505,6 @@
 			buildConfigurations = (
 				4EB76E982D4C3A4100C57A92 /* Debug */,
 				4EB76E992D4C3A4100C57A92 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4EB76E9A2D4C3A4100C57A92 /* Build configuration list for PBXNativeTarget "RhythmGameTestTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4EB76E9B2D4C3A4100C57A92 /* Debug */,
-				4EB76E9C2D4C3A4100C57A92 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4EB76E9D2D4C3A4100C57A92 /* Build configuration list for PBXNativeTarget "RhythmGameTestUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4EB76E9E2D4C3A4100C57A92 /* Debug */,
-				4EB76E9F2D4C3A4100C57A92 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4EB76EA02D4C3A4100C57A92 /* Build configuration list for PBXNativeTarget "RhythmGameTest Watch AppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4EB76EA12D4C3A4100C57A92 /* Debug */,
-				4EB76EA22D4C3A4100C57A92 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4EB76EA32D4C3A4100C57A92 /* Build configuration list for PBXNativeTarget "RhythmGameTest Watch AppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4EB76EA42D4C3A4100C57A92 /* Debug */,
-				4EB76EA52D4C3A4100C57A92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -43,6 +43,7 @@ struct ContentView: View {
     @State private var fontSize = UIScreen.main.bounds.size.height/30
     @StateObject private var musicMonitor = MusicMonitor()
     
+    
     var body: some View {
         VStack {
             var songTitle = musicMonitor.songTitle
