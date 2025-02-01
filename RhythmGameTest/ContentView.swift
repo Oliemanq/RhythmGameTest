@@ -38,8 +38,7 @@ class MusicMonitor: ObservableObject {
     }
 }
 struct ContentView: View {
-    @State private var showAlert1 = false
-    @State private var showAlert2 = false
+    @State private var showAlert = false
     @State private var musicPerms = MPMediaLibrary.authorizationStatus() == .authorized
     @State private var fontSize = UIScreen.main.bounds.size.height/30
     @StateObject private var musicMonitor = MusicMonitor()
@@ -60,29 +59,10 @@ struct ContentView: View {
                 .opacity(musicPerms ? 1:0)
                 .padding(.vertical, 10)
             
-            //BUTTON 1_______________________________________________________________________________________
-            Button("Reset song title"){
-                showAlert1=true
-            }.alert(songTitle, isPresented: $showAlert1) {
-                Button("Cancel", role:.cancel) { }
-                Button("Reset") {
-                    songTitle = "No song playing"
-                }
-            }
-            .frame(width: UIScreen.main.bounds.width/1.6, height:UIScreen.main.bounds.size.height/20)
-            .font(.system(size: fontSize))
-            .foregroundColor(.secondary)
-            .background(Color.clear)
-            .clipShape(Capsule())
-            .overlay(Capsule().stroke(.gray, lineWidth: 2.5))
-            .shadow(color:.gray,radius: 3)
-            .offset(y: UIScreen.main.bounds.size.height/5.1)
-            .opacity(musicPerms ? 1:0)
-            
-            //BUTTON 2_________________________________________________
+            //BUTTON 1_________________________________________________
             if(!musicPerms){
                 Button("Request music access"){
-                    showAlert2=true
+                    showAlert=true
                     requestMusicPermission()
                 }
                 .frame(width: CGFloat("request music access".count)*fontSize/2, height:UIScreen.main.bounds.size.height/20)
