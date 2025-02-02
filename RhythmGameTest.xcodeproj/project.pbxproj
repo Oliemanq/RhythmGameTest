@@ -40,7 +40,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		4EDFDC292D4D68A500834D91 /* Exceptions for "RhythmGameTest" folder in "RhythmGameTest" target */ = {
+		4EFC8F7A2D4F2DEB00130ECF /* Exceptions for "RhythmGameTest" folder in "RhythmGameTest" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -50,10 +50,15 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		4E9ED0232D4F2D1200D1A49C /* Shared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		4EB76E492D4C3A3F00C57A92 /* RhythmGameTest */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				4EDFDC292D4D68A500834D91 /* Exceptions for "RhythmGameTest" folder in "RhythmGameTest" target */,
+				4EFC8F7A2D4F2DEB00130ECF /* Exceptions for "RhythmGameTest" folder in "RhythmGameTest" target */,
 			);
 			path = RhythmGameTest;
 			sourceTree = "<group>";
@@ -86,6 +91,7 @@
 		4EB76E3E2D4C3A3F00C57A92 = {
 			isa = PBXGroup;
 			children = (
+				4E9ED0232D4F2D1200D1A49C /* Shared */,
 				4EB76E492D4C3A3F00C57A92 /* RhythmGameTest */,
 				4EB76E712D4C3A4000C57A92 /* RhythmGameTest Watch App */,
 				4EB76E482D4C3A3F00C57A92 /* Products */,
@@ -119,6 +125,7 @@
 				4EB76E702D4C3A4000C57A92 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
+				4E9ED0232D4F2D1200D1A49C /* Shared */,
 				4EB76E492D4C3A3F00C57A92 /* RhythmGameTest */,
 			);
 			name = RhythmGameTest;
@@ -350,6 +357,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "RhythmGameTest Watch App/RhythmGameTest Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RhythmGameTest Watch App/Preview Content\"";
@@ -380,6 +388,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "RhythmGameTest Watch App/RhythmGameTest Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RhythmGameTest Watch App/Preview Content\"";
@@ -421,7 +430,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RhythmGameTest/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = RhythmGameTest;
-				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Needed to access currently playing media";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "This app needs access to play music from your library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -457,7 +466,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RhythmGameTest/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = RhythmGameTest;
-				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Needed to access currently playing media";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "This app needs access to play music from your library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

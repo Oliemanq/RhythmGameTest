@@ -46,7 +46,8 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            var songTitle = musicMonitor.songTitle
+            let songTitle = musicMonitor.songTitle
+            
             //SONG TEXT_______________________________________________
             Text(songTitle)
                 .underline()
@@ -66,27 +67,57 @@ struct ContentView: View {
                     showAlert=true
                     requestMusicPermission()
                 }
-                .frame(width: CGFloat("request music access".count)*fontSize/2, height:UIScreen.main.bounds.size.height/20)
+                .frame(width: getWidth(wid: "Request music access", font: fontSize), height:getHeight(wid: "Request music access"))
                 .font(.system(size: fontSize))
                 .foregroundColor(.secondary)
                 .background(Color.clear)
                 .clipShape(Capsule())
                 .overlay(Capsule().stroke(.gray, lineWidth: 2))
                 .shadow(color:.red,radius: 3)
-                .offset(y: UIScreen.main.bounds.size.height/5)
+                Spacer()
+                
             }else{
                 Text("Music permission granted")
-                    .frame(width: CGFloat("Music permission granted".count)*fontSize/2, height:UIScreen.main.bounds.size.height/20)
+                    .frame(width: getWidth(wid: "Request music access", font: fontSize), height:getHeight(wid: "Request music access"))
                     .font(.system(size: fontSize))
                     .foregroundColor(.secondary)
                     .background(Color.clear)
                     .clipShape(Capsule())
                     .overlay(Capsule().stroke(.gray, lineWidth: 2))
                     .shadow(color:.green,radius: 3)
-                    .offset(y: UIScreen.main.bounds.size.height/5)
+                    .edgesIgnoringSafeArea(.top)
+                Spacer(minLength: 0)
+                
             }
-        }
-    }
+            Text(UserDefaults.standard.string(forKey: "textOnPhone") ?? "")
+            Button("Send to watch"){
+                phoneToWatch()
+            }
+            .frame(width: getWidth(wid: "Send to watch", font: fontSize), height:UIScreen.main.bounds.size.height/20)
+            .font(.system(size: fontSize))
+            .foregroundColor(.secondary)
+            .background(Color.clear)
+            .clipShape(Capsule())
+            .overlay(Capsule().stroke(.gray, lineWidth: 2))
+            .shadow(color:.blue,radius: 3)
+            .offset(y: -200)
+                
+            Button("Send to phone"){
+                phoneToPhone()
+            }
+            .frame(width: getWidth(wid: "Send to watch", font: fontSize), height:UIScreen.main.bounds.size.height/20)
+            .font(.system(size: fontSize))
+            .foregroundColor(.secondary)
+            .background(Color.clear)
+            .clipShape(Capsule())
+            .overlay(Capsule().stroke(.gray, lineWidth: 2))
+            .shadow(color:.blue,radius: 3)
+            .offset(y: -200)
+            }
+                
+            
+        
+}
     
     func requestMusicPermission() {
         if MPMediaLibrary.authorizationStatus() == .denied {
@@ -129,3 +160,13 @@ func getHeight(wid: String) -> CGFloat {
         return UIScreen.main.bounds.size.height/20
     }
 }
+func phoneToWatch(){
+    print("Ran phoneToWatch")
+    UserDefaults.standard.set("Hello from Phone", forKey: "textOnWatch")
+}
+func phoneToPhone(){
+    print("ran phoneToPhone")
+    UserDefaults.standard.set("Hello from Phone", forKey: "textOnPhone")
+
+}
+

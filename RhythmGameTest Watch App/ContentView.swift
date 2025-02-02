@@ -7,18 +7,29 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var WatchApp = watchApp()
     var body: some View {
         
         VStack{
-            Text(WatchApp.textInput)
+            Text(UserDefaults.standard.string(forKey: "textOnWatch") ?? "No message")
             
-            Button("Click me!") {
-                WatchApp.watchToWatch()
-                WatchApp.watchToPhone()
+            Button("Watch to phone") {
+                watchToPhone()
             }.handGestureShortcut(.primaryAction);
+            
+            Button("Watch to watch"){
+                watchToWatch()
+            }
         }
     }
+}
+
+func watchToPhone(){
+    print("Ran watchToPhone")
+    UserDefaults.standard.set("Hello from Watch", forKey: "textOnPhone")
+}
+func watchToWatch(){
+    print("ran watchToWatch")
+    UserDefaults.standard.set("Hello from Phone", forKey: "textOnWatch")
 }
 
 
