@@ -5,11 +5,14 @@
 //  Created by Oliver Heisel on 1/30/25.
 //
 import SwiftUI
-import WatchConnectivity
+import SwiftData
 import MediaPlayer
 import Darwin
+import WatchConnectivity
 
 let musicPlayer = MPMusicPlayerController.systemMusicPlayer
+var IOStoWatchConnector = iOStoWatchConnector()
+
 
 class MusicMonitor: ObservableObject {
     private let player = MPMusicPlayerController.systemMusicPlayer
@@ -38,6 +41,7 @@ class MusicMonitor: ObservableObject {
     }
 }
 struct ContentView: View {
+    @Environment(\.modelContext) var modelContext
     @State private var showAlert = false
     @State private var musicPerms = MPMediaLibrary.authorizationStatus() == .authorized
     @State private var fontSize = UIScreen.main.bounds.size.height/30
@@ -45,6 +49,8 @@ struct ContentView: View {
     
     
     var body: some View {
+        var fromWatch = IOStoWatchConnector.msg
+
         VStack {
             let songTitle = musicMonitor.songTitle
             
@@ -57,9 +63,9 @@ struct ContentView: View {
                 .font(.system(size: fontSize))
                 .foregroundColor(.secondary)
                 .shadow(color:.gray,radius: 3)
-                .offset(y: UIScreen.main.bounds.size.height/7)
                 .opacity(musicPerms ? 1:0)
                 .padding(.vertical, 10)
+                .offset(y:300)
             
             //BUTTON 1_________________________________________________
             if(!musicPerms){
@@ -67,15 +73,14 @@ struct ContentView: View {
                     showAlert=true
                     requestMusicPermission()
                 }
-                .frame(width: getWidth(wid: "Request music access", font: fontSize), height:getHeight(wid: "Request music access"))
-                .font(.system(size: fontSize))
-                .foregroundColor(.secondary)
-                .background(Color.clear)
-                .clipShape(Capsule())
-                .overlay(Capsule().stroke(.gray, lineWidth: 2))
-                .shadow(color:.red,radius: 3)
-                Spacer()
-                
+                    .frame(width: getWidth(wid: "Request music access", font: fontSize), height:getHeight(wid: "Request music access"))
+                    .font(.system(size: fontSize))
+                    .foregroundColor(.secondary)
+                    .background(Color.clear)
+                    .clipShape(Capsule())
+                    .overlay(Capsule().stroke(.gray, lineWidth: 2))
+                    .shadow(color:.red,radius: 3)
+                    .offset(y: -300)
             }else{
                 Text("Music permission granted")
                     .frame(width: getWidth(wid: "Request music access", font: fontSize), height:getHeight(wid: "Request music access"))
@@ -85,36 +90,20 @@ struct ContentView: View {
                     .clipShape(Capsule())
                     .overlay(Capsule().stroke(.gray, lineWidth: 2))
                     .shadow(color:.green,radius: 3)
-                    .edgesIgnoringSafeArea(.top)
-                Spacer(minLength: 0)
-                
+                    .offset(y: -300)
             }
-            Text(UserDefaults.standard.string(forKey: "textOnPhone") ?? "")
-            Button("Send to watch"){
-                phoneToWatch()
-            }
-            .frame(width: getWidth(wid: "Send to watch", font: fontSize), height:UIScreen.main.bounds.size.height/20)
-            .font(.system(size: fontSize))
-            .foregroundColor(.secondary)
-            .background(Color.clear)
-            .clipShape(Capsule())
-            .overlay(Capsule().stroke(.gray, lineWidth: 2))
-            .shadow(color:.blue,radius: 3)
-            .offset(y: -200)
-                
-            Button("Send to phone"){
-                phoneToPhone()
-            }
-            .frame(width: getWidth(wid: "Send to watch", font: fontSize), height:UIScreen.main.bounds.size.height/20)
-            .font(.system(size: fontSize))
-            .foregroundColor(.secondary)
-            .background(Color.clear)
-            .clipShape(Capsule())
-            .overlay(Capsule().stroke(.gray, lineWidth: 2))
-            .shadow(color:.blue,radius: 3)
-            .offset(y: -200)
-            }
-                
+            
+            Text(fromWatch)
+                .underline()
+                .multilineTextAlignment(.center)
+                .frame(width: getWidth(wid: fromWatch, font: fontSize), height: getHeight(wid: fromWatch))
+                .fixedSize(horizontal: true, vertical: false)
+                .font(.system(size: fontSize))
+                .foregroundColor(.secondary)
+                .shadow(color:.gray,radius: 3)
+                .padding(.vertical, 10)
+                .offset(y:100)
+        }
             
         
 }
@@ -160,13 +149,3 @@ func getHeight(wid: String) -> CGFloat {
         return UIScreen.main.bounds.size.height/20
     }
 }
-func phoneToWatch(){
-    print("Ran phoneToWatch")
-    UserDefaults.standard.set("Hello from Phone", forKey: "textOnWatch")
-}
-func phoneToPhone(){
-    print("ran phoneToPhone")
-    UserDefaults.standard.set("Hello from Phone", forKey: "textOnPhone")
-
-}
-

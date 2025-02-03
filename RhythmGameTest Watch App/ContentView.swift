@@ -7,30 +7,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var watchToiOSConnector = WatchToiOSConnector()
+    @State var textFrom = ""
+    @State var textTo = ""
     var body: some View {
         
         VStack{
-            Text(UserDefaults.standard.string(forKey: "textOnWatch") ?? "No message")
+            Text(textFrom)
+            
+            TextField("Enter text to send", text: $textTo)
             
             Button("Watch to phone") {
-                watchToPhone()
+                watchToiOSConnector.sendTextToiOS(textTo)
             }.handGestureShortcut(.primaryAction);
             
-            Button("Watch to watch"){
-                watchToWatch()
-            }
         }
     }
 }
-
-func watchToPhone(){
-    print("Ran watchToPhone")
-    UserDefaults.standard.set("Hello from Watch", forKey: "textOnPhone")
-}
-func watchToWatch(){
-    print("ran watchToWatch")
-    UserDefaults.standard.set("Hello from Phone", forKey: "textOnWatch")
-}
-
-
-

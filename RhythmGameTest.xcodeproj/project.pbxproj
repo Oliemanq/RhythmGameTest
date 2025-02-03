@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4EB76E6E2D4C3A4000C57A92 /* RhythmGameTest Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4EB76E6D2D4C3A4000C57A92 /* RhythmGameTest Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4ED38FFD2D50720C00E5E750 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED38FFC2D50720C00E5E750 /* WatchConnectivity.framework */; };
+		4ED390032D50786C00E5E750 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED390022D50786C00E5E750 /* WatchConnectivity.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,8 @@
 /* Begin PBXFileReference section */
 		4EB76E472D4C3A3F00C57A92 /* RhythmGameTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RhythmGameTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB76E6D2D4C3A4000C57A92 /* RhythmGameTest Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RhythmGameTest Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ED38FFC2D50720C00E5E750 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS11.2.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
+		4ED390022D50786C00E5E750 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.2.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -50,11 +54,6 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		4E9ED0232D4F2D1200D1A49C /* Shared */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Shared;
-			sourceTree = "<group>";
-		};
 		4EB76E492D4C3A3F00C57A92 /* RhythmGameTest */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -75,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ED390032D50786C00E5E750 /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ED38FFD2D50720C00E5E750 /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,9 +92,9 @@
 		4EB76E3E2D4C3A3F00C57A92 = {
 			isa = PBXGroup;
 			children = (
-				4E9ED0232D4F2D1200D1A49C /* Shared */,
 				4EB76E492D4C3A3F00C57A92 /* RhythmGameTest */,
 				4EB76E712D4C3A4000C57A92 /* RhythmGameTest Watch App */,
+				4ED38FFB2D50720B00E5E750 /* Frameworks */,
 				4EB76E482D4C3A3F00C57A92 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,6 +106,15 @@
 				4EB76E6D2D4C3A4000C57A92 /* RhythmGameTest Watch App.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4ED38FFB2D50720B00E5E750 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4ED390022D50786C00E5E750 /* WatchConnectivity.framework */,
+				4ED38FFC2D50720C00E5E750 /* WatchConnectivity.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +135,6 @@
 				4EB76E702D4C3A4000C57A92 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				4E9ED0232D4F2D1200D1A49C /* Shared */,
 				4EB76E492D4C3A3F00C57A92 /* RhythmGameTest */,
 			);
 			name = RhythmGameTest;
@@ -434,7 +443,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -470,7 +480,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
