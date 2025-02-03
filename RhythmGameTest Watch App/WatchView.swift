@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-struct ContentView: View {
+struct WatchView: View {
     @StateObject var watchToiOSConnector = WatchToiOSConnector()
     @State var textFrom = ""
     @State var textTo = ""

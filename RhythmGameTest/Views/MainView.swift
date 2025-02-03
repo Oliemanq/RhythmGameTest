@@ -5,7 +5,6 @@
 //  Created by Oliver Heisel on 1/30/25.
 //
 import SwiftUI
-import SwiftData
 import MediaPlayer
 import Darwin
 import WatchConnectivity
@@ -41,8 +40,7 @@ class MusicMonitor: ObservableObject {
         player.endGeneratingPlaybackNotifications()
     }
 }
-struct ContentView: View {
-    @Environment(\.modelContext) var modelContext
+struct MainView: View {
     @State private var showAlert = false
     @State private var musicPerms = MPMediaLibrary.authorizationStatus() == .authorized
     @State private var fontSize = UIScreen.main.bounds.size.height/30
@@ -51,7 +49,7 @@ struct ContentView: View {
     
     var body: some View {
         let fromWatch = IOStoWatchConnector.msg
-        var song: Song = musicMonitor.curSong
+        let song: Song = musicMonitor.curSong
         
         
 
@@ -78,7 +76,7 @@ struct ContentView: View {
                 .opacity(musicPerms ? 1:0)
                 .padding(.vertical, 10)
             
-            Text(String(song.getDuration()))
+            Text(song.getDuration())
                 .font(.system(size: fontSize))
                 .foregroundColor(.secondary)
                 .shadow(color:.gray,radius: 3)
@@ -153,7 +151,7 @@ struct ContentView: View {
     }
 }
 #Preview {
-    ContentView()
+    MainView()
 }
 
 func printTest(inp: String){
