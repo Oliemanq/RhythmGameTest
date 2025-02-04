@@ -37,11 +37,15 @@ class Song{
         let form = NumberFormatter()
         form.minimumFractionDigits = 2
         form.maximumFractionDigits = 2
-        let temp = duration/60
-        var tempString: String = (form.string(for: temp) ?? "0.00")
-        tempString.insert(":", at: tempString.index(tempString.endIndex, offsetBy: -2))
-        tempString.remove(at: tempString.index(tempString.endIndex, offsetBy: -4))
-        return tempString
+        let mins:Int = Int((duration/60.0).rounded(.down))
+        let sec = Int((duration.truncatingRemainder(dividingBy: 60.0)).rounded(.down))
+        var secS = String(sec)
+        if secS.count == 1 {
+            secS.insert("0", at: secS.startIndex)
+        }
+        let time = String(mins) + ":" + secS
+        
+        return time
     }
     
     public func setTitle(_ newTitle: String){
