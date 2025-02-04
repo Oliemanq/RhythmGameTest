@@ -27,11 +27,11 @@ struct SecondaryView: View {
                 .font(.system(size: fontSize))
                 .frame(width: getWidth(wid: "Game screen", font: fontSize), height: getHeight(wid: "Game screen"))
                 .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
-            
                 .font(.system(size: fontSize))
                 .foregroundColor(.secondary)
                 .shadow(color:.gray,radius: 3)
                 .offset(x: 0, y: -325)
+            
         }
     }
     
