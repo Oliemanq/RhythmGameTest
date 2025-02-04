@@ -12,17 +12,20 @@ import WatchConnectivity
 let musicPlayer = MPMusicPlayerController.systemMusicPlayer
 var IOStoWatchConnector = iOStoWatchConnector()
 
+
 struct MainView: View {
     @State private var showAlert = false
     @State private var musicPerms = MPMediaLibrary.authorizationStatus() == .authorized
     @State private var fontSize = UIScreen.main.bounds.size.height/30
     @StateObject private var musicMonitor = MusicMonitor()
+    @Environment(\.colorScheme) var colorScheme
     var height: CGFloat { UIScreen.main.bounds.height }
     var width: CGFloat { UIScreen.main.bounds.width }
     
     var body: some View {
         let fromWatch = IOStoWatchConnector.msg
         let song: Song = musicMonitor.curSong
+        let darkMode: Bool = (colorScheme == .dark)
         
         NavigationStack {
             ZStack {
@@ -34,21 +37,21 @@ struct MainView: View {
                         .frame(width: getWidth(wid: song.getTitle(), font: fontSize), height: getHeight(wid: song.getTitle()))
                         .fixedSize(horizontal: true, vertical: false)
                         .font(.system(size: fontSize))
-                        .foregroundColor(.secondary)
+                        .foregroundColor(darkMode ? .white : .secondary)
                         .shadow(color:.gray,radius: 3)
                         .opacity(musicPerms ? 1:0)
                         .padding(.vertical, 10)
                     
                     Text(song.getArtist())
                         .font(.system(size: fontSize))
-                        .foregroundColor(.secondary)
+                        .foregroundColor(darkMode ? .white : .secondary)
                         .shadow(color:.gray,radius: 3)
                         .opacity(musicPerms ? 1:0)
                         .padding(.vertical, 10)
                     
                     Text(song.getDuration())
                         .font(.system(size: fontSize))
-                        .foregroundColor(.secondary)
+                        .foregroundColor(darkMode ? .white : .secondary)
                         .shadow(color:.gray,radius: 3)
                         .opacity(musicPerms ? 1:0)
                         .padding(.vertical, 10)
@@ -56,7 +59,7 @@ struct MainView: View {
                     
                     Text(String(song.getBPM()))
                         .font(.system(size: fontSize))
-                        .foregroundColor(.secondary)
+                        .foregroundColor(darkMode ? .white : .secondary)
                         .shadow(color:.gray,radius: 3)
                         .opacity(musicPerms ? 1:0)
                         .padding(.vertical, 10)
@@ -70,20 +73,19 @@ struct MainView: View {
                     }
                     .frame(width: getWidth(wid: "Request music access", font: fontSize), height:getHeight(wid: "Request music access"))
                     .font(.system(size: fontSize))
-                    .foregroundColor(.secondary)
-                    .background(Color.clear)
+                    .foregroundColor(darkMode ? .white : .secondary)
                     .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                    .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(.gray, lineWidth: 1))
+                    .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(darkMode ? .white : .gray, lineWidth: 1))
                     .shadow(color:.red,radius: 3)
                     .offset(y: -300)
                 }else{
                     Text("Music permission granted")
                         .frame(width: getWidth(wid: "Request music access", font: fontSize), height:getHeight(wid: "Request music access"))
                         .font(.system(size: fontSize))
-                        .foregroundColor(.secondary)
-                        .background(Color(red: 225/255, green: 255/255, blue: 225/255), in:RoundedRectangle(cornerRadius: 10, style: .continuous))
+                        .foregroundColor(darkMode ? .white : .secondary)
+                        .background(darkMode ? Color(red: 30/255, green: 50/255, blue: 30/255) : Color(red: 225/255, green: 255/255, blue: 225/255), in:RoundedRectangle(cornerRadius: 10, style: .continuous))
                         .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                        .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(.gray, lineWidth: 1))
+                        .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(darkMode ? .white : .gray, lineWidth: 1))
                         .shadow(color:.green,radius: 2)
                         .offset(y: -300)
                 }
@@ -91,17 +93,20 @@ struct MainView: View {
                     NavigationLink(destination: SecondaryView()) {
                         Text("Next screen")
                             .font(.system(size: fontSize))
-                            .foregroundColor(.secondary)
+                            .foregroundColor(darkMode ? .white :.secondary)
                             .frame(width: getWidth(wid: "Next screen", font: fontSize), height:getHeight(wid: "Next screen"))
                             .background(.ultraThinMaterial, in:RoundedRectangle(cornerRadius: 10, style: .continuous))
-                            .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(.secondary, lineWidth: 1))
-                            
+                            .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(darkMode ? .white : .secondary, lineWidth: 1))
+                            .navigationBarBackButtonHidden(true)
                     }.offset(y:-400)
                 }.offset(y:200)
                 
             }
             .frame(width: width, height: height)
-            .background(LinearGradient(colors: [.white,.pink], startPoint: .topLeading, endPoint: .bottomTrailing))
+            .background(LinearGradient(colors: [darkMode ? Color(red: 25/255, green: 10/255, blue: 10/255) : Color.white,
+                                                darkMode ? Color(red: 255/255, green: 100/255, blue: 100/255) : Color.pink],
+                                       startPoint: .topLeading,
+                                       endPoint: .bottomTrailing))
                                 
             //TEXT FROM WATCH_______________________________________________
             Text(fromWatch)
