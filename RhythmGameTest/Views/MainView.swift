@@ -21,7 +21,9 @@ struct MainView: View {
     @State private var inBPMText: Int?
     @StateObject private var musicMonitor = MusicMonitor()
     @Environment(\.colorScheme) var colorScheme
-    @Environment(\.modelContext) public var context
+    @Environment(\.modelContext) private var context
+    @Query(sort: \DataItem.name) private var items: [DataItem]
+    
     var height: CGFloat { UIScreen.main.bounds.height }
     var width: CGFloat { UIScreen.main.bounds.width }
     
@@ -96,10 +98,18 @@ struct MainView: View {
                                 name: song.title,
                                 artist: song.artist,
                                 duration: song.duration,
-                                BPM: song.bpm
+                                bpm: song.bpm
                             )
                             print(item.name)
                             context.insert(item)
+                            do {
+                                try context.save()
+                                print("Saved successfully")
+                            } catch {
+                                print("Error saving: \(error)")
+                            }
+                            print(items.count)
+                            
                         }else{
                             showAlert = true
                         }

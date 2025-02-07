@@ -11,6 +11,8 @@ import SwiftData
 
 @main
 struct RhythmGameTestApp: App {
+    let container = try! ModelContainer(for: DataItem.self)
+
     var body: some Scene {
         WindowGroup {
             MainView()

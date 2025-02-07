@@ -10,19 +10,19 @@ import SwiftData
 @Model
 class DataItem: Identifiable {
     
-    var id: String
+    @Attribute(.unique)var id: String
     var name: String
     var artist: String
-    var duration: Duration
+    var duration: Double
     var bpm: Int
     
-    init(name: String, artist: String, duration: Duration, BPM: Int) {
+    init(name: String, artist: String, duration: Duration, bpm: Int) {
         
         self.id = UUID().uuidString
         self.name = name
         self.artist = artist
-        self.duration = duration
-        self.bpm = BPM
+        self.duration = Double(duration.components.seconds)
+        self.bpm = bpm
         
         
     }
