@@ -5,6 +5,7 @@
 //  Created by Oliver Heisel on 1/30/25.
 //
 import SwiftUI
+import SwiftData
 import MediaPlayer
 import Darwin
 import WatchConnectivity
@@ -15,26 +16,30 @@ var IOStoWatchConnector = iOStoWatchConnector()
 
 struct MainView: View {
     @State private var showAlert = false
-    @State private var musicPerms = MPMediaLibrary.authorizationStatus() == .authorized
+    @State private var musicPerms = true//FIX THIS MPMediaLibrary.authorizationStatus() == .authorized
     @State private var fontSize = UIScreen.main.bounds.size.height/30
+    @State private var inBPMText: Int?
     @StateObject private var musicMonitor = MusicMonitor()
     @Environment(\.colorScheme) var colorScheme
+    @Environment(\.modelContext) public var context
     var height: CGFloat { UIScreen.main.bounds.height }
     var width: CGFloat { UIScreen.main.bounds.width }
     
+    
+    
     var body: some View {
         let fromWatch = IOStoWatchConnector.msg
-        let song: Song = musicMonitor.curSong
+        var song: Song = musicMonitor.curSong
         let darkMode: Bool = (colorScheme == .dark)
         
         NavigationStack {
             ZStack {
                 VStack{
                     //SONG TEXT_______________________________________________
-                    Text(song.getTitle())
+                    Text(song.title)
                         .underline()
                         .multilineTextAlignment(.center)
-                        .frame(width: getWidth(wid: song.getTitle(), font: fontSize), height: getHeight(wid: song.getTitle()))
+                        .frame(width: getWidth(wid: song.title, font: fontSize), height: getHeight(wid: song.title))
                         .fixedSize(horizontal: true, vertical: false)
                         .font(.system(size: fontSize))
                         .foregroundColor(darkMode ? .white : .secondary)
@@ -42,14 +47,14 @@ struct MainView: View {
                         .opacity(musicPerms ? 1:0)
                         .padding(.vertical, 10)
                     
-                    Text(song.getArtist())
+                    Text(song.artist)
                         .font(.system(size: fontSize))
                         .foregroundColor(darkMode ? .white : .secondary)
                         .shadow(color:.gray,radius: 3)
                         .opacity(musicPerms ? 1:0)
                         .padding(.vertical, 10)
                     
-                    Text(song.getDuration())
+                    Text(song.duration.formatted())
                         .font(.system(size: fontSize))
                         .foregroundColor(darkMode ? .white : .secondary)
                         .shadow(color:.gray,radius: 3)
@@ -57,12 +62,70 @@ struct MainView: View {
                         .padding(.vertical, 10)
                     
                     
-                    Text(String(song.getBPM()))
+                    Text(song.bpm.formatted())
                         .font(.system(size: fontSize))
                         .foregroundColor(darkMode ? .white : .secondary)
                         .shadow(color:.gray,radius: 3)
                         .opacity(musicPerms ? 1:0)
                         .padding(.vertical, 10)
+                    
+                    
+                    TextField(
+                        "Enter new bpm",
+                        value: $inBPMText,
+                        format:.number)
+                        .font(.system(size: fontSize))
+                        .foregroundColor(darkMode ? .white :.secondary)
+                        .frame(width: getWidth(wid: "Change BPM", font: fontSize), height:getHeight(wid: "Change BPM"))
+                        .background(.ultraThinMaterial, in:RoundedRectangle(cornerRadius: 10, style: .continuous))
+                        .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(darkMode ? .white : .secondary, lineWidth: 1))
+                    
+                    Button("Change BPM"){
+                        song.bpm = inBPMText ?? 0
+                    }
+                    .font(.system(size: fontSize))
+                    .foregroundColor(darkMode ? .white :.secondary)
+                    .frame(width: getWidth(wid: "Change BPM", font: fontSize), height:getHeight(wid: "Change BPM"))
+                    .background(.ultraThinMaterial, in:RoundedRectangle(cornerRadius: 10, style: .continuous))
+                    .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(darkMode ? .white : .secondary, lineWidth: 1))
+
+                    
+                    Button("Save song"){
+                        if song.bpm != 0{
+                            let item = DataItem(
+                                name: song.title,
+                                artist: song.artist,
+                                duration: song.duration,
+                                BPM: song.bpm
+                            )
+                            print(item.name)
+                            context.insert(item)
+                        }else{
+                            showAlert = true
+                        }
+                    }
+                    .font(.system(size: fontSize))
+                    .foregroundColor(darkMode ? .white :.secondary)
+                    .frame(width: getWidth(wid: "Save song", font: fontSize), height:getHeight(wid: "save song"))
+                    .background(.ultraThinMaterial, in:RoundedRectangle(cornerRadius: 10, style: .continuous))
+                    .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(darkMode ? .white : .secondary, lineWidth: 1))
+                    .alert(
+                        "Please enter a BPM",
+                        isPresented: $showAlert){
+                            Button("OK"){
+                                self.showAlert = false
+                            }
+                        }
+                    
+                    NavigationLink(destination: ContextView()){
+                        Text("Show saved songs")
+                            .font(.system(size: fontSize))
+                            .foregroundColor(darkMode ? .white :.secondary)
+                            .frame(width: getWidth(wid: "Show saved songs", font: fontSize), height:getHeight(wid: "Show saved songs"))
+                            .background(.ultraThinMaterial, in:RoundedRectangle(cornerRadius: 10, style: .continuous))
+                            .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(darkMode ? .white : .secondary, lineWidth: 1))
+                            .navigationBarBackButtonHidden(true)
+                    }
                 }.offset(y: 150)
                 VStack{
                 //BUTTON 1_________________________________________________
@@ -119,7 +182,11 @@ struct MainView: View {
                 .shadow(color:.gray,radius: 3)
                 .padding(.vertical, 10)
                 .offset(y:100)
+            
         }
+        
+        
+        
 }
     
     func requestMusicPermission() {
@@ -152,8 +219,10 @@ func printTest(inp: String){
 func getWidth(wid: String, font: CGFloat) -> CGFloat {
     if(wid.count > 25){
         return UIScreen.main.bounds.size.width * 0.8
+    }else if (wid.count < 11) && (CGFloat(wid.count)*font-95 > 0){
+        return CGFloat(wid.count)*font-95
     }else{
-        return CGFloat(wid.count)*font/1.75
+        return CGFloat(wid.count)*font/1.7
     }
 }
 func getHeight(wid: String) -> CGFloat {
@@ -163,3 +232,5 @@ func getHeight(wid: String) -> CGFloat {
         return UIScreen.main.bounds.size.height/20
     }
 }
+
+

@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import SwiftData
+
 
 @main
 struct RhythmGameTestApp: App {
@@ -13,5 +15,6 @@ struct RhythmGameTestApp: App {
         WindowGroup {
             MainView()
         }
+        .modelContainer(for: DataItem.self)
     }
 }
