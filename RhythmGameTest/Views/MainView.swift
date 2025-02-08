@@ -27,8 +27,6 @@ struct MainView: View {
     var height: CGFloat { UIScreen.main.bounds.height }
     var width: CGFloat { UIScreen.main.bounds.width }
     
-    
-    
     var body: some View {
         let fromWatch = IOStoWatchConnector.msg
         var song: Song = musicMonitor.curSong
@@ -38,166 +36,119 @@ struct MainView: View {
             ZStack {
                 VStack{
                     //SONG TEXT_______________________________________________
-                    Text(song.title)
-                        .underline()
-                        .multilineTextAlignment(.center)
-                        .frame(width: getWidth(wid: song.title, font: fontSize), height: getHeight(wid: song.title))
-                        .fixedSize(horizontal: true, vertical: false)
-                        .font(.system(size: fontSize))
-                        .foregroundColor(darkMode ? .white : .secondary)
-                        .shadow(color:.gray,radius: 3)
-                        .opacity(musicPerms ? 1:0)
-                        .padding(.vertical, 10)
-                    
-                    Text(song.artist)
-                        .font(.system(size: fontSize))
-                        .foregroundColor(darkMode ? .white : .secondary)
-                        .shadow(color:.gray,radius: 3)
-                        .opacity(musicPerms ? 1:0)
-                        .padding(.vertical, 10)
-                    
-                    Text(song.duration.formatted())
-                        .font(.system(size: fontSize))
-                        .foregroundColor(darkMode ? .white : .secondary)
-                        .shadow(color:.gray,radius: 3)
-                        .opacity(musicPerms ? 1:0)
-                        .padding(.vertical, 10)
-                    
-                    
-                    Text(song.bpm.formatted())
-                        .font(.system(size: fontSize))
-                        .foregroundColor(darkMode ? .white : .secondary)
-                        .shadow(color:.gray,radius: 3)
-                        .opacity(musicPerms ? 1:0)
-                        .padding(.vertical, 10)
-                    
-                    
-                    TextField(
-                        "Enter new bpm",
-                        value: $inBPMText,
-                        format:.number)
+                    NavigationLink(destination: SongDetailsView()) {
+                        Text("Song details")
+                            .font(.system(size: fontSize))
+                            .foregroundColor(darkMode ? .white :.secondary)
+                            .frame(width: getWidth(wid: "Song details", font: fontSize), height:getHeight(wid: "Song details"))
+                            .background(.ultraThinMaterial, in:RoundedRectangle(cornerRadius: 10, style: .continuous))
+                            .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(darkMode ? .white : .secondary, lineWidth: 1))
+                            .navigationBarBackButtonHidden(true)
+                    }
+                        TextField(
+                            "Enter new bpm",
+                            value: $inBPMText,
+                            format:.number)
                         .font(.system(size: fontSize))
                         .foregroundColor(darkMode ? .white :.secondary)
                         .frame(width: getWidth(wid: "Change BPM", font: fontSize), height:getHeight(wid: "Change BPM"))
                         .background(.ultraThinMaterial, in:RoundedRectangle(cornerRadius: 10, style: .continuous))
                         .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(darkMode ? .white : .secondary, lineWidth: 1))
-                    
-                    Button("Change BPM"){
-                        song.bpm = inBPMText ?? 0
-                    }
-                    .font(.system(size: fontSize))
-                    .foregroundColor(darkMode ? .white :.secondary)
-                    .frame(width: getWidth(wid: "Change BPM", font: fontSize), height:getHeight(wid: "Change BPM"))
-                    .background(.ultraThinMaterial, in:RoundedRectangle(cornerRadius: 10, style: .continuous))
-                    .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(darkMode ? .white : .secondary, lineWidth: 1))
-
-                    
-                    Button("Save song"){
-                        if song.bpm != 0{
-                            let item = DataItem(
-                                name: song.title,
-                                artist: song.artist,
-                                duration: song.duration,
-                                bpm: song.bpm
-                            )
-                            print(item.name)
-                            context.insert(item)
-                            do {
-                                try context.save()
-                                print("Saved successfully")
-                            } catch {
-                                print("Error saving: \(error)")
-                            }
-                            print(items.count)
-                            
-                        }else{
-                            showAlert = true
+                        
+                        Button("Change BPM"){
+                            song.bpm = inBPMText ?? 0
                         }
-                    }
-                    .font(.system(size: fontSize))
-                    .foregroundColor(darkMode ? .white :.secondary)
-                    .frame(width: getWidth(wid: "Save song", font: fontSize), height:getHeight(wid: "save song"))
-                    .background(.ultraThinMaterial, in:RoundedRectangle(cornerRadius: 10, style: .continuous))
-                    .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(darkMode ? .white : .secondary, lineWidth: 1))
-                    .alert(
-                        "Please enter a BPM",
-                        isPresented: $showAlert){
-                            Button("OK"){
-                                self.showAlert = false
-                            }
-                        }
-                    
-                    NavigationLink(destination: ContextView()){
-                        Text("Show saved songs")
-                            .font(.system(size: fontSize))
-                            .foregroundColor(darkMode ? .white :.secondary)
-                            .frame(width: getWidth(wid: "Show saved songs", font: fontSize), height:getHeight(wid: "Show saved songs"))
-                            .background(.ultraThinMaterial, in:RoundedRectangle(cornerRadius: 10, style: .continuous))
-                            .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(darkMode ? .white : .secondary, lineWidth: 1))
-                            .navigationBarBackButtonHidden(true)
-                    }
-                }.offset(y: 150)
-                VStack{
-                //BUTTON 1_________________________________________________
-                if(!musicPerms){
-                    Button("Request music access"){
-                        showAlert=true
-                        requestMusicPermission()
-                    }
-                    .frame(width: getWidth(wid: "Request music access", font: fontSize), height:getHeight(wid: "Request music access"))
-                    .font(.system(size: fontSize))
-                    .foregroundColor(darkMode ? .white : .secondary)
-                    .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                    .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(darkMode ? .white : .gray, lineWidth: 1))
-                    .shadow(color:.red,radius: 3)
-                    .offset(y: -300)
-                }else{
-                    Text("Music permission granted")
-                        .frame(width: getWidth(wid: "Request music access", font: fontSize), height:getHeight(wid: "Request music access"))
                         .font(.system(size: fontSize))
-                        .foregroundColor(darkMode ? .white : .secondary)
-                        .background(darkMode ? Color(red: 30/255, green: 50/255, blue: 30/255) : Color(red: 225/255, green: 255/255, blue: 225/255), in:RoundedRectangle(cornerRadius: 10, style: .continuous))
-                        .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                        .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(darkMode ? .white : .gray, lineWidth: 1))
-                        .shadow(color:.green,radius: 2)
-                        .offset(y: -300)
-                }
-                //BUTTON 2____________________________________________________-
-                    NavigationLink(destination: SecondaryView()) {
-                        Text("Next screen")
+                        .foregroundColor(darkMode ? .white :.secondary)
+                        .frame(width: getWidth(wid: "Change BPM", font: fontSize), height:getHeight(wid: "Change BPM"))
+                        .background(.ultraThinMaterial, in:RoundedRectangle(cornerRadius: 10, style: .continuous))
+                        .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(darkMode ? .white : .secondary, lineWidth: 1))
+                        
+                        
+                        Button("Save song"){
+                            showAlert = addItem(context: context, items: items, song: song)
+                        }
+                        .font(.system(size: fontSize))
+                        .foregroundColor(darkMode ? .white :.secondary)
+                        .frame(width: getWidth(wid: "Save song", font: fontSize), height:getHeight(wid: "save song"))
+                        .background(.ultraThinMaterial, in:RoundedRectangle(cornerRadius: 10, style: .continuous))
+                        .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(darkMode ? .white : .secondary, lineWidth: 1))
+                        .alert(
+                            "Please enter a BPM",
+                            isPresented: $showAlert){
+                                Button("OK"){
+                                    self.showAlert = false
+                                }
+                            }
+                        
+                        NavigationLink(destination: ContextView()){
+                            Text("Show saved songs")
+                                .font(.system(size: fontSize))
+                                .foregroundColor(darkMode ? .white :.secondary)
+                                .frame(width: getWidth(wid: "Show saved songs", font: fontSize), height:getHeight(wid: "Show saved songs"))
+                                .background(.ultraThinMaterial, in:RoundedRectangle(cornerRadius: 10, style: .continuous))
+                                .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(darkMode ? .white : .secondary, lineWidth: 1))
+                                .navigationBarBackButtonHidden(true)
+                        }
+                    }.offset(y: 150)
+                    VStack{
+                        //BUTTON 1_________________________________________________
+                        if(!musicPerms){
+                            Button("Request music access"){
+                                showAlert=true
+                                requestMusicPermission()
+                            }
+                            .frame(width: getWidth(wid: "Request music access", font: fontSize), height:getHeight(wid: "Request music access"))
                             .font(.system(size: fontSize))
-                            .foregroundColor(darkMode ? .white :.secondary)
-                            .frame(width: getWidth(wid: "Next screen", font: fontSize), height:getHeight(wid: "Next screen"))
-                            .background(.ultraThinMaterial, in:RoundedRectangle(cornerRadius: 10, style: .continuous))
-                            .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(darkMode ? .white : .secondary, lineWidth: 1))
-                            .navigationBarBackButtonHidden(true)
-                    }.offset(y:-400)
-                }.offset(y:200)
+                            .foregroundColor(darkMode ? .white : .secondary)
+                            .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                            .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(darkMode ? .white : .gray, lineWidth: 1))
+                            .shadow(color:.red,radius: 3)
+                            .offset(y: -300)
+                        }else{
+                            Text("Music permission granted")
+                                .frame(width: getWidth(wid: "Request music access", font: fontSize), height:getHeight(wid: "Request music access"))
+                                .font(.system(size: fontSize))
+                                .foregroundColor(darkMode ? .white : .secondary)
+                                .background(darkMode ? Color(red: 30/255, green: 50/255, blue: 30/255) : Color(red: 225/255, green: 255/255, blue: 225/255), in:RoundedRectangle(cornerRadius: 10, style: .continuous))
+                                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                                .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(darkMode ? .white : .gray, lineWidth: 1))
+                                .shadow(color:.green,radius: 2)
+                                .offset(y: -300)
+                        }
+                        //BUTTON 2____________________________________________________-
+                        NavigationLink(destination: SecondaryView()) {
+                            Text("Next screen")
+                                .font(.system(size: fontSize))
+                                .foregroundColor(darkMode ? .white :.secondary)
+                                .frame(width: getWidth(wid: "Next screen", font: fontSize), height:getHeight(wid: "Next screen"))
+                                .background(.ultraThinMaterial, in:RoundedRectangle(cornerRadius: 10, style: .continuous))
+                                .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(darkMode ? .white : .secondary, lineWidth: 1))
+                                .navigationBarBackButtonHidden(true)
+                        }.offset(y:-400)
+                    }.offset(y:200)
+                    
+                }
+                .frame(width: width, height: height)
+                .background(LinearGradient(colors: [darkMode ? Color(red: 25/255, green: 10/255, blue: 10/255) : Color.white,
+                                                    darkMode ? Color(red: 255/255, green: 100/255, blue: 100/255) : Color.pink],
+                                           startPoint: .topLeading,
+                                           endPoint: .bottomTrailing))
+                
+                //TEXT FROM WATCH_______________________________________________
+                Text(fromWatch)
+                    .underline()
+                    .multilineTextAlignment(.center)
+                    .frame(width: getWidth(wid: fromWatch, font: fontSize), height: getHeight(wid: fromWatch))
+                    .fixedSize(horizontal: true, vertical: false)
+                    .font(.system(size: fontSize))
+                    .foregroundColor(.secondary)
+                    .shadow(color:.gray,radius: 3)
+                    .padding(.vertical, 10)
+                    .offset(y:100)
                 
             }
-            .frame(width: width, height: height)
-            .background(LinearGradient(colors: [darkMode ? Color(red: 25/255, green: 10/255, blue: 10/255) : Color.white,
-                                                darkMode ? Color(red: 255/255, green: 100/255, blue: 100/255) : Color.pink],
-                                       startPoint: .topLeading,
-                                       endPoint: .bottomTrailing))
-                                
-            //TEXT FROM WATCH_______________________________________________
-            Text(fromWatch)
-                .underline()
-                .multilineTextAlignment(.center)
-                .frame(width: getWidth(wid: fromWatch, font: fontSize), height: getHeight(wid: fromWatch))
-                .fixedSize(horizontal: true, vertical: false)
-                .font(.system(size: fontSize))
-                .foregroundColor(.secondary)
-                .shadow(color:.gray,radius: 3)
-                .padding(.vertical, 10)
-                .offset(y:100)
-            
         }
-        
-        
-        
-}
     
     func requestMusicPermission() {
         if MPMediaLibrary.authorizationStatus() == .denied {
@@ -243,4 +194,36 @@ func getHeight(wid: String) -> CGFloat {
     }
 }
 
+func addItem(context: ModelContext, items: [DataItem], song: Song) -> Bool {
+    if song.bpm != 0 {
+        let item = DataItem(
+            name: song.title,
+            artist: song.artist,
+            duration: song.duration,
+            bpm: song.bpm
+        )
+        
+        // Iterate over the items array instead of a single item
+        for existingItem in items {
+            if existingItem.name == song.title {
+                print("already exists")
+                return false
+            }
+        }
+        
+        print(item.name)
+        context.insert(item)
+        
+        do {
+            try context.save()
+            print("Saved successfully")
+        } catch {
+            print("Error saving: \(error)")
+        }
+        print(items.count)
+    } else {
+        return true
+    }
+    return false  // Add return statement here for when item is saved
+}
 
