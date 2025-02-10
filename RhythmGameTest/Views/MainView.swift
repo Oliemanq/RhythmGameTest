@@ -19,15 +19,16 @@ struct MainView: View {
     @State private var musicPerms = true//FIX THIS MPMediaLibrary.authorizationStatus() == .authorized
     @State private var fontSize = UIScreen.main.bounds.size.height/30
     @State private var inBPMText: Int?
-    @StateObject private var musicMonitor = MusicMonitor()
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.modelContext) private var context
     @Query(sort: \DataItem.name) private var items: [DataItem]
+
     
     var height: CGFloat { UIScreen.main.bounds.height }
     var width: CGFloat { UIScreen.main.bounds.width }
     
     var body: some View {
+        let musicMonitor = MusicMonitor(modelContext: context)
         let fromWatch = IOStoWatchConnector.msg
         var song: Song = musicMonitor.curSong
         let darkMode: Bool = (colorScheme == .dark)

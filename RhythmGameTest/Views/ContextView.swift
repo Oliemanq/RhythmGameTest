@@ -20,7 +20,6 @@ public struct ContextView: View {
                 let formattedDur = tempDur.formatted()
                 VStack{
                     HStack{
-                        
                         Text(item.name)
                             .multilineTextAlignment(.center)
                         Text("|")
