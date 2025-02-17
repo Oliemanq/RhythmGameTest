@@ -33,4 +33,10 @@ class WatchToiOSConnector: NSObject, WCSessionDelegate, ObservableObject {
             print("session unreachable")
         }
     }
+    func ToggleIOS(){
+        let data: [String: Any] = [
+            "msg": "ToggleIOS"
+        ]
+        session.sendMessage(data, replyHandler: nil)
+    }
 }

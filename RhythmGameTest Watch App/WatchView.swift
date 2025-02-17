@@ -19,6 +19,9 @@ struct WatchView: View {
             
             Button("Watch to phone") {
                 watchToiOSConnector.sendTextToiOS(textTo)
+            }
+            Button("Toggle game"){
+                watchToiOSConnector.sendTextToiOS("ToggleIOS")
             }.handGestureShortcut(.primaryAction);
             
         }

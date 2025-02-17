@@ -33,34 +33,34 @@ struct SecondaryView: View {
                 .font(.system(size: fontSize))
                 .foregroundColor(darkMode ? Color(red: 50/255, green: 75/255, blue: 60/255) : .secondary)
                 .offset(x: 0, y: -325)
-            
             HStack{
-                Text("Current Song")
-                    .foregroundColor(textColor)
-                    .font(.system(size: fontSize-15))
-                    .multilineTextAlignment(.center)
-                    .frame(width: 100, height: 100)
-                    .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
-                    .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(textColor, lineWidth: 1))
-                    .font(.system(size: fontSize))
-                    .foregroundColor(darkMode ? Color(red: 50/255, green: 75/255, blue: 60/255) : .secondary)
-                    .padding(.trailing, 10)
-                    .shadow(color:.green, radius: 0.2)
-                
-                Text("Curated playlist")
-                    .foregroundColor(textColor)
-                    .font(.system(size: fontSize-15))
-                    .multilineTextAlignment(.center)
-                    .frame(width: 100, height: 100)
-                    .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
-                    .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(textColor, lineWidth: 1))
-                    .font(.system(size: fontSize))
-                    .foregroundColor(darkMode ? Color(red: 50/255, green: 75/255, blue: 60/255) : .secondary)
-                    .padding(.leading, 10)
-                    .shadow(color:.green, radius: 0.2)
-                    
-            }
-            .offset(y:200)
+                NavigationLink(destination: GameView()){
+                    Text("Current Song")
+                        .foregroundColor(textColor)
+                        .font(.system(size: fontSize-15))
+                        .multilineTextAlignment(.center)
+                        .frame(width: 100, height: 100)
+                        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+                        .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(textColor, lineWidth: 1))
+                        .font(.system(size: fontSize))
+                        .foregroundColor(darkMode ? Color(red: 50/255, green: 75/255, blue: 60/255) : .secondary)
+                        .padding(.trailing, 10)
+                        .shadow(color:.green, radius: 0.2)
+                }
+                NavigationLink(destination: GameView()){
+                    Text("Curated playlist")
+                        .foregroundColor(textColor)
+                        .font(.system(size: fontSize-15))
+                        .multilineTextAlignment(.center)
+                        .frame(width: 100, height: 100)
+                        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+                        .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(textColor, lineWidth: 1))
+                        .font(.system(size: fontSize))
+                        .foregroundColor(darkMode ? Color(red: 50/255, green: 75/255, blue: 60/255) : .secondary)
+                        .padding(.leading, 10)
+                        .shadow(color:.green, radius: 0.2)
+                }
+            }.offset(y:200)
         }
     }
     

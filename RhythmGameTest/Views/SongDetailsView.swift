@@ -27,7 +27,6 @@ struct SongDetailsView: View {
     
     var body: some View {
         let musicMonitor = MusicMonitor(modelContext: context)
-
         let song: Song = musicMonitor.curSong
         let darkMode: Bool = (colorScheme == .dark)
         VStack{

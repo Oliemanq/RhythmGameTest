@@ -46,12 +46,14 @@ class MusicMonitor: ObservableObject {
                                    bpm: item.bpm,
                                    duration: .seconds(Int(tempDuration)))
                     songMatch = true
-                    
                 }
             }
             if !songMatch{
                 let tempDuration = nowPlayingItem.playbackDuration
-                curSong = Song(title: nowPlayingItem.title ?? "No Title", artist: nowPlayingItem.artist ?? "No Artist",bpm: nowPlayingItem.beatsPerMinute, duration: .seconds(Int(tempDuration)))
+                curSong = Song(title: nowPlayingItem.title ?? "No Title",
+                               artist: nowPlayingItem.artist ?? "No Artist",
+                               bpm: nowPlayingItem.beatsPerMinute,
+                               duration: .seconds(Int(tempDuration)))
             }
             
         }

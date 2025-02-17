@@ -12,6 +12,7 @@ import SwiftData
 class iOStoWatchConnector: NSObject, WCSessionDelegate, ObservableObject {
     var session: WCSession
     public var msg = ""
+    public var show = false
     
     init(session: WCSession = .default) {
         self.session = session
@@ -33,9 +34,18 @@ class iOStoWatchConnector: NSObject, WCSessionDelegate, ObservableObject {
         
     }
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        print(message)
-        msg = message["msg"] as! String
-        print(msg)
+        if (message["msg"] as! String == "ToggleIOS"){
+            show.toggle()
+            print("Toggled show " + String(show))
+        }else{
+            print(message)
+            msg = message["msg"] as! String
+            print(msg)
+        }
+        
+
+        
+        
     }
     
 }
