@@ -7,25 +7,26 @@
 
 import SwiftData
 import SwiftUI
+import Foundation
+import EffectsLibrary
 
 struct GameView: View {
     var IOStoWatchConnector = iOStoWatchConnector()
-    @State var isPlaying: Bool = false
+    @State var isPlaying: Bool = true
     @State var offset: CGSize = .zero
     @Environment(\.modelContext) private var context
     @Query(sort: \DataItem.name) private var items: [DataItem]
     
     
     var body: some View {
-        var isPlaying = IOStoWatchConnector.show
         let musicMonitor = MusicMonitor(modelContext: context)
         let song: Song = musicMonitor.curSong
-        let bps = song.bpm/60
-        
+        let beats = 60/(Double(song.bpm))
+        var hit: Bool = false
         
         let timer1 = Timer.publish(
-            every: TimeInterval(bps),       // Second
-            tolerance: 0.1, // Gives tolerance so that SwiftUI makes optimization
+            every: TimeInterval(beats),       // Second
+            tolerance: 0, // Gives tolerance so that SwiftUI makes optimization
             on: .main,      // Main Thread
             in: .common     // Common Loop
         ).autoconnect()
@@ -40,31 +41,29 @@ struct GameView: View {
                 .offset(offset)
             
             Button("Play") {
+                print("BPM: " + String(song.bpm))
+                print("Beats: " + String(beats))
+                isPlaying.toggle()
                 print(isPlaying)
-                IOStoWatchConnector.show.toggle()
             }
             .frame(width: 60, height: 40)
-            .scaleEffect(isPlaying ? 1.2 : 1)
             .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(.secondary, lineWidth: 1))
             .scaleEffect(isPlaying ? 1.2 : 1)
             .offset(x: 0, y: 275)
             
         }.onReceive(timer1) { (_) in
-            let offset = CGSize(
-                width: 200,
-                height: 250
-            )
+            hit = false
+            
             withAnimation(.linear(duration: 0)) {
-                self.offset = offset
+                offset.height = 250
+                offset.width = 200
             }
-            sleep(UInt32(bps/2))
-            self.offset = CGSize(
-                width: 0,
-                height: 250
-            )
-            withAnimation(.linear(duration: 0)) {
-                self.offset = offset
+            withAnimation(.linear(duration: TimeInterval(beats))) {
+                offset.height = 250
+                offset.width = -180
             }
+            hit = true
+            
         }
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         .background(Color.black.opacity(0.3))

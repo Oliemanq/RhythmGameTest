@@ -47,7 +47,7 @@ public struct ContextView: View {
                 }
             }
         }
-        .frame(width: UIScreen.main.bounds.width+10, height: UIScreen.main.bounds.height)
-        .padding(.top, 100)
+        .frame(width: UIScreen.main.bounds.width+10, height: UIScreen.main.bounds.height-50)
+        
     }
 }

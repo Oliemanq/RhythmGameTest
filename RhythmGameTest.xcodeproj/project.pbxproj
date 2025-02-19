@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E2A6AFB2D659D80004E5D70 /* EffectsLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 4E2A6AFA2D659D80004E5D70 /* EffectsLibrary */; };
 		4EB76E6E2D4C3A4000C57A92 /* RhythmGameTest Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4EB76E6D2D4C3A4000C57A92 /* RhythmGameTest Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4ED38FFD2D50720C00E5E750 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED38FFC2D50720C00E5E750 /* WatchConnectivity.framework */; };
 		4ED390032D50786C00E5E750 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED390022D50786C00E5E750 /* WatchConnectivity.framework */; };
@@ -75,6 +76,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ED390032D50786C00E5E750 /* WatchConnectivity.framework in Frameworks */,
+				4E2A6AFB2D659D80004E5D70 /* EffectsLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +141,7 @@
 			);
 			name = RhythmGameTest;
 			packageProductDependencies = (
+				4E2A6AFA2D659D80004E5D70 /* EffectsLibrary */,
 			);
 			productName = RhythmGameTest;
 			productReference = 4EB76E472D4C3A3F00C57A92 /* RhythmGameTest.app */;
@@ -193,6 +196,9 @@
 			);
 			mainGroup = 4EB76E3E2D4C3A3F00C57A92;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				4E2A6AF92D659D80004E5D70 /* XCRemoteSwiftPackageReference "effects-library" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4EB76E482D4C3A3F00C57A92 /* Products */;
 			projectDirPath = "";
@@ -534,6 +540,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4E2A6AF92D659D80004E5D70 /* XCRemoteSwiftPackageReference "effects-library" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GetStream/effects-library";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4E2A6AFA2D659D80004E5D70 /* EffectsLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4E2A6AF92D659D80004E5D70 /* XCRemoteSwiftPackageReference "effects-library" */;
+			productName = EffectsLibrary;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4EB76E3F2D4C3A3F00C57A92 /* Project object */;
 }
