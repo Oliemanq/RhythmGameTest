@@ -56,22 +56,14 @@ struct MainView: View {
                         .background(.ultraThinMaterial, in:RoundedRectangle(cornerRadius: 10, style: .continuous))
                         .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(darkMode ? .white : .secondary, lineWidth: 1))
                         
+                    
                         Button("Change BPM"){
                             song.bpm = inBPMText ?? 0
-                        }
-                        .font(.system(size: fontSize))
-                        .foregroundColor(darkMode ? .white :.secondary)
-                        .frame(width: getWidth(wid: "Change BPM", font: fontSize), height:getHeight(wid: "Change BPM"))
-                        .background(.ultraThinMaterial, in:RoundedRectangle(cornerRadius: 10, style: .continuous))
-                        .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(darkMode ? .white : .secondary, lineWidth: 1))
-                        
-                        
-                        Button("Save song"){
                             showAlert = addItem(context: context, items: items, song: song)
                         }
                         .font(.system(size: fontSize))
                         .foregroundColor(darkMode ? .white :.secondary)
-                        .frame(width: getWidth(wid: "Save song", font: fontSize), height:getHeight(wid: "save song"))
+                        .frame(width: getWidth(wid: "Change BPM", font: fontSize), height:getHeight(wid: "Change BPM"))
                         .background(.ultraThinMaterial, in:RoundedRectangle(cornerRadius: 10, style: .continuous))
                         .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(darkMode ? .white : .secondary, lineWidth: 1))
                         .alert(
@@ -203,17 +195,23 @@ func addItem(context: ModelContext, items: [DataItem], song: Song) -> Bool {
             duration: song.duration,
             bpm: song.bpm
         )
-        
+        var exists = false
         // Iterate over the items array instead of a single item
         for existingItem in items {
             if existingItem.name == song.title {
-                print("already exists")
-                return false
+                print("already exists, overriding existing item")
+                context.delete(existingItem)
+                
+                context.insert(item)
+                
+                exists = true
             }
         }
+        if !exists{
+            print(item.name)
+            context.insert(item)
+        }
         
-        print(item.name)
-        context.insert(item)
         
         do {
             try context.save()
